@@ -3,10 +3,21 @@
   width: 70%;
   margin: 3rem auto 0;
 }
+
 .calculator {
   background-color: rgb(144, 241, 218);
-  height: 500px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+}
+
+.input_container {
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+}
+
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
 }

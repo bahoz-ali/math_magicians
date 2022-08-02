@@ -1,0 +1,8 @@
+.input {
+  background-color: var(--clr-third);
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  text-align: right;
+}
