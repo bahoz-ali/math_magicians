@@ -1,5 +1,5 @@
 .btn {
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   width: 100%;
@@ -8,7 +8,6 @@
 
 .btn.btn--primary {
   background-color: var(--clr-primary);
-
 }
 
 .btn.btn--secondary {

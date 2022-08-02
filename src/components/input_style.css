@@ -1,6 +1,7 @@
 .input {
   background-color: var(--clr-third);
-  border: 1px solid white;
+  border: 1px solid #fff;
+  color: #fff;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   width: 100%;
