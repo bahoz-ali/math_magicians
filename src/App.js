@@ -1,11 +1,16 @@
+import React from 'react';
 import './App.css';
+import Calculator from './components/Calculator';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to first react app</h1>
-    </div>
-  );
+// eslint-disable-next-line
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Calculator />
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,3 +1,13 @@
 body {
   background-color: white;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-secondary: #e0e0e0;
+  --clr-primary: #f5913e;
+  --clr-third: #858694;
+}
