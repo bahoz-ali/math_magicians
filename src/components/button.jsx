@@ -6,21 +6,18 @@ class Button extends Component {
     super(props);
   }
 
-  colorTheme = () => {
-    const { theme, number } = this.props;
-
-    let classes = theme ? `btn ${theme} ` : 'btn btn--secondary ';
-    return number ? classes + number : classes;
-  };
-
   render() {
-    const { icon, theme, number } = this.props;
+    const { icon, theme, number, handleCalculate } = this.props;
     const colorTheme = theme ? `btn ${theme}` : 'btn btn--secondary';
     const numberClass = number ? `btn_container ${number}` : 'btn_container';
 
     return (
       <div className={numberClass}>
-        <button type="button" className={colorTheme}>
+        <button
+          onClick={handleCalculate}
+          name={icon}
+          type="button"
+          className={colorTheme}>
           {icon}
         </button>
       </div>
