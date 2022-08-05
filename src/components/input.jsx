@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './input_style.css';
 
-class Input extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  getCalculateData = () => {
-    const { total, next, operation } = this.props.result;
+const Input = (props) => {
+  const getCalculateData = () => {
+    const { total, next, operation } = props.result;
     if (total && next && operation) return `${total} ${operation} ${next}`;
     if (total && operation) return `${total} ${operation} `;
     if (total && !next) return `${total}`;
@@ -17,20 +13,18 @@ class Input extends Component {
     return 0;
   };
 
-  render() {
-    return (
-      <div className="input_container">
-        <input
-          className="input"
-          type="text"
-          name="number"
-          id="number"
-          disabled
-          value={this.getCalculateData()}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="input_container">
+      <input
+        className="input"
+        type="text"
+        name="number"
+        id="number"
+        disabled
+        value={getCalculateData()}
+      />
+    </div>
+  );
+};
 
 export default Input;
