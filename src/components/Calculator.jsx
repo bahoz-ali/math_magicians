@@ -1,82 +1,70 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './calculator_style.css';
 import Button from './button';
 import Input from './input';
 import calculate from '../logic/calculator';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Calculator = (props) => {
+  const [calcInfo, setCalcInfo] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  state = {
-    calcInfo: {
-      total: null,
-      next: null,
-      operation: null,
-    },
-  };
-
-  handleKeyPress = async (event) => {
+  const handleKeyPress = (event) => {
     const btnName = event.target.name;
-    const calculator = calculate(this.state.calcInfo, btnName);
-    const updateCalculatorInfo = { ...this.state.calcInfo, ...calculator };
+    const calculator = calculate(calcInfo, btnName);
+    const updateCalculatorInfo = { ...calcInfo, ...calculator };
 
-    await this.setState({ calcInfo: updateCalculatorInfo });
+    setCalcInfo(updateCalculatorInfo);
   };
 
-  render() {
-    return (
-      <section className="calculator_section">
-        <div className="calculator">
-          <Input result={this.state.calcInfo} />
-          <Button handleCalculate={this.handleKeyPress} icon="AC" />
-          <Button handleCalculate={this.handleKeyPress} icon="+/-" />
-          <Button handleCalculate={this.handleKeyPress} icon="%" />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="÷"
-            theme="btn--primary"
-          />
-          <Button handleCalculate={this.handleKeyPress} icon="7" />
-          <Button handleCalculate={this.handleKeyPress} icon="8" />
-          <Button handleCalculate={this.handleKeyPress} icon="9" />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="x"
-            theme="btn--primary"
-          />
-          <Button handleCalculate={this.handleKeyPress} icon="4" />
-          <Button handleCalculate={this.handleKeyPress} icon="5" />
-          <Button handleCalculate={this.handleKeyPress} icon="6" />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="-"
-            theme="btn--primary"
-          />
-          <Button handleCalculate={this.handleKeyPress} icon="1" />
-          <Button handleCalculate={this.handleKeyPress} icon="2" />
-          <Button handleCalculate={this.handleKeyPress} icon="3" />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="+"
-            theme="btn--primary"
-          />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="0"
-            number="zero"
-          />
-          <Button handleCalculate={this.handleKeyPress} icon="." />
-          <Button
-            handleCalculate={this.handleKeyPress}
-            icon="="
-            theme="btn--primary"
-          />
-        </div>
-      </section>
-    );
-  }
-}
+  return (
+    <section className="calculator_section">
+      <div className="calculator">
+        <Input result={calcInfo} />
+        <Button handleCalculate={handleKeyPress} icon="AC" />
+        <Button handleCalculate={handleKeyPress} icon="+/-" />
+        <Button handleCalculate={handleKeyPress} icon="%" />
+        <Button
+          handleCalculate={handleKeyPress}
+          icon="÷"
+          theme="btn--primary"
+        />
+        <Button handleCalculate={handleKeyPress} icon="7" />
+        <Button handleCalculate={handleKeyPress} icon="8" />
+        <Button handleCalculate={handleKeyPress} icon="9" />
+        <Button
+          handleCalculate={handleKeyPress}
+          icon="x"
+          theme="btn--primary"
+        />
+        <Button handleCalculate={handleKeyPress} icon="4" />
+        <Button handleCalculate={handleKeyPress} icon="5" />
+        <Button handleCalculate={handleKeyPress} icon="6" />
+        <Button
+          handleCalculate={handleKeyPress}
+          icon="-"
+          theme="btn--primary"
+        />
+        <Button handleCalculate={handleKeyPress} icon="1" />
+        <Button handleCalculate={handleKeyPress} icon="2" />
+        <Button handleCalculate={handleKeyPress} icon="3" />
+        <Button
+          handleCalculate={handleKeyPress}
+          icon="+"
+          theme="btn--primary"
+        />
+        <Button handleCalculate={handleKeyPress} icon="0" number="zero" />
+        <Button handleCalculate={handleKeyPress} icon="." />
+        <Button
+          handleCalculate={handleKeyPress}
+          icon="="
+          theme="btn--primary"
+        />
+      </div>
+    </section>
+  );
+};
 
 export default Calculator;

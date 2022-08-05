@@ -3,14 +3,12 @@ import './App.css';
 import Calculator from './components/Calculator';
 
 // eslint-disable-next-line
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <Calculator />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Calculator />
+    </div>
+  );
+};
 
 export default App;
