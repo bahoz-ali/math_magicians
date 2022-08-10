@@ -1,0 +1,11 @@
+.quote_section {
+  padding: 2rem;
+}
+
+.quote_section p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--clr-heading);
+}
+
+
