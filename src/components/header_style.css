@@ -2,11 +2,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 2rem;
+  padding: 1rem 2rem;
 }
 
 header h1 {
   margin: 0;
+  font-size: 1.5rem;
+  color: var(--clr-heading);
 }
 
 a:active {
@@ -17,10 +19,11 @@ a:active {
   gap: 1rem;
 }
 
-.nav-list a {
+.nav-list .nav__item, .nav-list a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: brown;
+  color: var(--clr-text)
 }
+
