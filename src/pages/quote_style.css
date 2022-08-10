@@ -1,11 +1,19 @@
 .quote_section {
-  padding: 2rem;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quote_section p {
   font-size: 1.1rem;
   font-weight: bold;
+  max-width: 65ch;
   color: var(--clr-heading);
 }
 
-
+.author {
+  color: var(--clr-text);
+  font-family: cursive;
+  font-size: 0.8rem;
+}

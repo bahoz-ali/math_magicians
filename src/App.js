@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import Calculator from './pages/Calculator';
 import Header from './components/Header';
-import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Quote from './pages/Quote';
 

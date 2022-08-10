@@ -11,8 +11,8 @@ body {
   --clr-primary: #f5913e;
   --clr-third: #858694;
   --clr-background: #f6f6f2;
-  --clr-heading: #388087; 
-  --clr-text: #6fb3b8; 
+  --clr-heading: #388087;
+  --clr-text: #6fb3b8;
 }
 
 ul {
@@ -21,7 +21,8 @@ ul {
   list-style-type: none;
 }
 
-h1, h2{
+h1,
+h2 {
   color: var(--clr-heading);
 }
 

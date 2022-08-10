@@ -14,16 +14,17 @@ header h1 {
 a:active {
   color: inherit;
 }
+
 .nav-list {
   display: flex;
   gap: 1rem;
 }
 
-.nav-list .nav__item, .nav-list a {
+.nav-list .nav__item,
+.nav-list a {
   text-decoration: none;
   font-weight: bold;
   font-size: 0.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: var(--clr-text)
+  color: var(--clr-text);
 }
-
