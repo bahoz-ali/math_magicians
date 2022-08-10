@@ -11,3 +11,9 @@ body {
   --clr-primary: #f5913e;
   --clr-third: #858694;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
