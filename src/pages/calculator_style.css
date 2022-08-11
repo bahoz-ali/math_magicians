@@ -1,10 +1,27 @@
 
 .calculator_section {
-  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-inline: 4rem;
   margin: 3rem auto 0;
+  gap: 2rem;
+}
+
+.calculator_right {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.calculator_left h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .calculator {
+  text-align: center;
+  width: 50%;
+  margin-inline: auto;
   background-color: rgb(144, 241, 218);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
