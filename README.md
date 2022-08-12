@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-- coming soon
+[look up](https://the-great-bahoz-ali-site.netlify.app/)
 
 ## Getting Started
 
